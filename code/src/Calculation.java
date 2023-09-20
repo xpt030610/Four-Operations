@@ -1,7 +1,3 @@
-/**
- * 用于生成分数
- * a/b 与 c/d 两个分数
- */
 class Calculation {
     int a, b, c, d, m, n;
     static String answer;
@@ -66,7 +62,6 @@ class Calculation {
             }
         }
     }
-
 }
 
 
