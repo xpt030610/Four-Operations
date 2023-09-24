@@ -28,7 +28,7 @@ public class NewExam {
             NUM_OF_QUESTIONS = Integer.parseInt(args[1]);
             //改最大数据
             MAX_NUMBER = Integer.parseInt(args[2]);
-            List<String> intQuestionList = newExam();
+            List<String> intQuestionList = newSimExam();
             List<String> fractionQuestionList = newFraExam();
             FileIO.writeFile("Exercises.txt", test.toString());
             FileIO.writeFile("Answers.txt", answer.toString());
@@ -83,7 +83,7 @@ public class NewExam {
     }
 
 
-    public static List<String> newExam() {
+    public static List<String> newSimExam() {
         List<String> questions = new ArrayList<>();
         int count = 0; // 生成的题目数量
         while (count < NUM_OF_QUESTIONS) {
@@ -120,8 +120,6 @@ public class NewExam {
 
     public static List<String> newFraExam() {
         List<String> questions = new ArrayList<>();
-        StringBuilder answer = new StringBuilder();
-        StringBuilder test = new StringBuilder();
         Random random = new Random();
         for (int count = 0; count < NUM_OF_QUESTIONS; count++) {
             int a = random.nextInt(MAX_NUMBER - MIN_NUMBER + 1) + MIN_NUMBER;
